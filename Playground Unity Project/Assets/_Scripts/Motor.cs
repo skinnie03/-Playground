@@ -7,6 +7,7 @@ public class Motor : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private Transform m_GroundCheck;
     [SerializeField] private LayerMask m_WhatIsGround;
+    public Animator animator;
 
     private Vector3 velocity = Vector3.zero;
     private bool jump = false;
@@ -62,7 +63,12 @@ public class Motor : MonoBehaviour
     {
         if (velocity != Vector3.zero)
         {
+            animator.SetBool("isMoving", true);
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
