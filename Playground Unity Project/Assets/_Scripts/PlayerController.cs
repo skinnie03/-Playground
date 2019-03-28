@@ -6,7 +6,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Motor motor;
-    [SerializeField] public float speed = 10f;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private BoxCollider groundCheck;
+
 
     private void Start()
     {
@@ -16,14 +19,17 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         float _xMov = Input.GetAxisRaw("Horizontal");
-        //float _zMov = Input.GetAxisRaw("Vertical");
-        float _zMov = 1f;
+        float _zMov = Input.GetAxisRaw("Vertical");
+        //float _zMov = 1f;
 
         Vector3 _movHorizontal = transform.right * _xMov;
         Vector3 _movVertical = transform.forward * _zMov;
 
         Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
 
+        bool _jump = Input.GetKeyDown(KeyCode.Space);
+
         motor.Move(_velocity);
+        motor.Jump(_jump, jumpForce);
     }
 }
