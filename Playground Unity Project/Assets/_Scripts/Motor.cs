@@ -63,12 +63,12 @@ public class Motor : MonoBehaviour
     {
         if (velocity != Vector3.zero)
         {
-            animator.SetBool("isMoving", true);
+            //animator.SetBool("isMoving", true);
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
         else
         {
-            animator.SetBool("isMoving", false);
+            //animator.SetBool("isMoving", false);
         }
     }
 
