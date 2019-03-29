@@ -6,6 +6,7 @@ public class Shotgun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firepoint;
+    public Animator animator;
 
     private void Update()
     {
@@ -13,6 +14,7 @@ public class Shotgun : MonoBehaviour
         {
             Debug.Log("Shotgun shooting");
             ShootMultipleProjectiles();
+
         }
     }
 
@@ -33,5 +35,7 @@ public class Shotgun : MonoBehaviour
         rotVector.y -= 30f;
         Debug.Log(rotVector);
         Instantiate(bullet, firepoint.position, Quaternion.Euler(rotVector));
+
+        animator.SetTrigger("attackTrigger");
     }
 }
