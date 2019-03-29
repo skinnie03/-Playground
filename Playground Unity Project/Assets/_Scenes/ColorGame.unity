@@ -1040,7 +1040,7 @@ MonoBehaviour:
   firepoint: {fileID: 1203343960}
   animator: {fileID: 161086097}
   iconCDMask: {fileID: 1880187141}
-  startUp: 0.5
+  startup: 0.5
   secondShot: 0.7
   coolDown: 1
 --- !u!4 &873097535
@@ -1140,7 +1140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970635000}
   m_LocalRotation: {x: 0.14911656, y: -0, z: -0, w: 0.9888196}
-  m_LocalPosition: {x: 0, y: 5.9, z: -6.55}
+  m_LocalPosition: {x: 0, y: 5.9, z: -6.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 873097535}
