@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
 
-        bool _jump = Input.GetKeyDown(KeyCode.Space);
+        bool _jump = Input.GetKeyDown(KeyCode.Z);
 
         motor.Move(_velocity);
         motor.Jump(_jump, jumpForce);

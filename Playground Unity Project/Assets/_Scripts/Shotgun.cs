@@ -9,7 +9,7 @@ public class Shotgun : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Shotgun shooting");
             ShootMultipleProjectiles();
