@@ -10,17 +10,25 @@ public class TwinShot : MonoBehaviour
     public Animator animator;
     public Image iconCDMask;
 
-    [SerializeField] private float startUp = 0.2f;
-    [SerializeField] private float secondShot = 0.2f;
+    [SerializeField] private float startup = 0.5f;
+    [SerializeField] private float secondShot = 0.7f;
+    private float shotDelay = 0.2f;
+
     [SerializeField] private float coolDown = 1f;
     private float coolDownTimer = 0f;
+
+    private void Start()
+    {
+        shotDelay = secondShot - startup;
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.X) && coolDownTimer <= 0)
         {
             Debug.Log("Twin Shot!");
-            CastTwinShot();
+            //CastTwinShot();
+            StartCoroutine(CastTwinShot(startup, shotDelay));
         }
 
         //control CD
@@ -30,6 +38,21 @@ public class TwinShot : MonoBehaviour
         iconCDMask.fillAmount = coolDownTimer / coolDown;
     }
 
+    IEnumerator CastTwinShot(float _startup, float _shotDelay)
+    {
+        animator.SetTrigger("attackTrigger");
+        coolDownTimer = coolDown;
+
+        yield return new WaitForSeconds(_startup);
+        print("1st shot");
+        Shoot();
+
+        yield return new WaitForSeconds(_shotDelay);
+        print("2nd shot");
+        Shoot();
+    }
+
+    /*
     public void CastTwinShot()
     {
         Invoke("Shoot", startUp);
@@ -37,6 +60,7 @@ public class TwinShot : MonoBehaviour
         animator.SetTrigger("attackTrigger");
         coolDownTimer = coolDown;
     }
+    */
 
     public void Shoot()
     {
