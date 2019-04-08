@@ -3,6 +3,9 @@ using UnityEditor;
 
 public class CustomWindow : EditorWindow
 {
+    public int numberOfPrefabs = 3;
+    public GameObject[] myPrefabs;
+
     [MenuItem("Window/CustomWindow")]
     public static void ShowWindow()
     {
@@ -16,6 +19,21 @@ public class CustomWindow : EditorWindow
         if (GUILayout.Button("Select PS objects"))
         {
             SelectAllObjectsWithTag("ParticleSystem");
+        }
+
+        //Prefab
+        numberOfPrefabs = EditorGUILayout.IntField("Number of Prefabs", numberOfPrefabs);
+
+        if (GUILayout.Button("Change the number of prefabs"))
+        {
+            myPrefabs = new GameObject[numberOfPrefabs];
+
+            for (int i = 0; i < numberOfPrefabs; i++)
+            {
+                myPrefabs[i] = (GameObject)EditorGUILayout.ObjectField(myPrefabs[i], typeof(GameObject), false);
+            }
+
+            Debug.Log(myPrefabs.Length);
         }
     }
 
