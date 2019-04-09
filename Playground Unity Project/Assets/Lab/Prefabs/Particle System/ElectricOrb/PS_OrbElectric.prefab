@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 499782054}
   m_Layer: 0
   m_Name: ElectricBeam
-  m_TagString: Untagged
+  m_TagString: ParticleSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4711,7 +4711,7 @@ GameObject:
   - component: {fileID: 1262801745}
   m_Layer: 0
   m_Name: SmokeOutside
-  m_TagString: Untagged
+  m_TagString: ParticleSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9409,7 +9409,7 @@ GameObject:
   - component: {fileID: 1579402752}
   m_Layer: 0
   m_Name: Particles
-  m_TagString: Untagged
+  m_TagString: ParticleSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14107,7 +14107,7 @@ GameObject:
   - component: {fileID: 6008950034478147827}
   m_Layer: 0
   m_Name: PS_OrbElectric
-  m_TagString: Untagged
+  m_TagString: ParticleSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14172,7 +14172,7 @@ GameObject:
   - component: {fileID: 3742457786917178299}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: ParticleSystem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
