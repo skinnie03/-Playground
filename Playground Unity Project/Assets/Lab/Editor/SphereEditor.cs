@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+/* Sample Editor Script
 [CustomEditor(typeof(Sphere))]
 public class SphereEditor : Editor
 {
@@ -13,3 +14,4 @@ public class SphereEditor : Editor
         sphere.transform.localScale = Vector3.one * sphere.baseSize;
     }
 }
+*/

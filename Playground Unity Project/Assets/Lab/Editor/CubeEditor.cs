@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+/* Sample Editor Script
+
 [CustomEditor(typeof(Cube))]
 public class CubeEditor : Editor {
 
@@ -26,3 +28,4 @@ public class CubeEditor : Editor {
     }
 
 }
+*/
