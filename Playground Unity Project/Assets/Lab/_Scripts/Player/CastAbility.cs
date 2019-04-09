@@ -15,6 +15,7 @@ public class CastAbility : MonoBehaviour
         
     }
 
+    /*
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -35,4 +36,5 @@ public class CastAbility : MonoBehaviour
             Instantiate(ability.prefab, firepoint.position, firepoint.rotation);
         }
     }
+    */
 }

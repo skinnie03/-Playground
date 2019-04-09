@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b704242842aed4f81a47440d39d19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: 03e146aded165024687ddb2d47069d7f, type: 2}
+  ability: {fileID: 0}
   firepoint: {fileID: 2131142106}
 --- !u!4 &694429384 stripped
 Transform:
@@ -793,12 +793,12 @@ PrefabInstance:
     - target: {fileID: 7836457165491779662, guid: c9692d6d70412354b80bd70eb3e07eef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.088981934
+      value: 0.08898192
       objectReference: {fileID: 0}
     - target: {fileID: 7836457165491779662, guid: c9692d6d70412354b80bd70eb3e07eef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8045204
+      value: -0.80452055
       objectReference: {fileID: 0}
     - target: {fileID: 7836457165491779662, guid: c9692d6d70412354b80bd70eb3e07eef,
         type: 3}
